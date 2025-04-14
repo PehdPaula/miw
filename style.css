@@ -1,0 +1,245 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo da página */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fundo mais escuro */
+    color: #fff;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Tela de Apresentação */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: #121212; /* Fundo mais escuro */
+    padding: 40px 20px;
+    color: #fff;
+  }
+  
+  /* Logo */
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  /* Título de boas-vindas */
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFB800; /* Cor amarela */
+    margin-bottom: 20px;
+  }
+  
+  /* Descrição do site */
+  .description {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #ddd;
+    max-width: 600px;
+  }
+  
+  /* Estilo para os botões */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .btn {
+    background-color: #FFB800;
+    color: #333;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 200px;
+  }
+  
+  .btn:hover {
+    background-color: #e6a600;
+    transform: scale(1.05);
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Seção de Nossos Recursos e Principais Funcionalidades */
+  .features, .features-main {
+    padding: 40px 20px;
+    background-color: #202020; /* Cinza escuro */
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Títulos principais */
+  .features h2, .features-main h2 {
+    font-size: 25px;
+    color: #fff; /* Títulos brancos */
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: bold;
+    display: inline-block; /* Para centralizar o título */
+    z-index: 1; /* Colocar o título acima da linha */
+  }
+  
+  /* Cards de recursos */
+  .feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #141414; /* Fundo cinza bem escuro */
+    width: 310px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #adadad;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+  }
+  
+  /* Efeito de linha ao passar o mouse sobre o card */
+  .card:hover::after {
+    width: 100%;
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffffff; /* Título amarelo */
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Linha amarela no card */
+  .card h3::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #FFB800;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    background-color: #444; /* Muda o fundo do card ao passar o mouse */
+  }
+  
+  /* Efeito de linha amarela nos títulos ao passar o mouse */
+  .features h2::after, .features-main h2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #FFB800; /* Linha amarela */
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Quando o mouse passa sobre o retângulo inteiro, a linha se expande */
+  .card:hover h3::after {
+    width: 100%;
+  }
+  
+  .card:hover {
+    background-color: #0f0f0f;
+  }
+  
+  .features h2:hover::after, .features-main h2:hover::after {
+    width: 100%; /* Expande a linha a partir do centro */
+  }
+  
+  .features h2, .features-main h2:hover {
+    cursor: pointer;
+  }
+  
+  /* Rodapé */
+  .footer {
+    text-align: center;
+    background-color: #222; /* Fundo mais escuro */
+    color: #ddd;
+    padding: 20px;
+  }
+  
+  .footer a {
+    color: #FFB800;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Seção Sobre Nós */
+  .about {
+    padding: 40px 100px; /* Mantivemos o padding para garantir o espaço interno adequado */
+    background-color: #121212; /* Fundo preto */
+    color: #fff;
+    text-align: center;
+    border-radius: 0; /* Retirado o arredondamento */
+    box-shadow: none; /* Removido o efeito de sombra */
+    margin-top: 40px; /* Ajustei a margem superior para 40px para não ficar muito distante do topo */
+    max-width: 100%; /* Aumenta a largura para ocupar toda a tela */
+    width: 100%; /* Certificando-se de que ocupa toda a largura */
+  }
+  
+  /* Título da seção Sobre Nós */
+  .about h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFB800; /* Amarelo suave */
+    margin-bottom: 20px; /* Aumentei a margem inferior do título para dar mais espaço */
+  }
+  
+  /* Texto da seção Sobre Nós */
+  .about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd; /* Cor de texto mais suave */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-bottom: 40px; /* Mantivemos o espaço abaixo do texto */
+  }
+  
+  /* Rodapé */
+  .footer {
+    background-color: #121212; /* Cor do fundo agora igual a da seção Sobre Nós */
+    padding: 40px 20px; /* Garantindo um bom espaçamento no rodapé também */
+    text-align: center;
+  }
+  
+  /* Espaçamento entre "Sobre Nós" e "Já tem uma conta? Faça login" */
+  .login-section {
+    margin-top: 60px; /* Mantivemos o espaçamento adequado entre o "Sobre Nós" e o login */
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
