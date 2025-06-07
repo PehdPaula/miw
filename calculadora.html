@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Calculadora de Investimentos - MIW</title>
+  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="calculadora.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="saudacao">
+      <h2>Calculadora de Investimentos</h2>
+      <button class="voltar-btn" onclick="window.location.href='principal.html'">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="form-group">
+      <label for="tipoInvestimento">
+        Tipo de Investimento
+        <span class="tooltip">
+          <span class="tooltip-icon">?</span>
+          <span class="tooltip-text">
+            <strong>Tipo de Investimento:</strong><br />
+            <em>LCI/LCA</em> são isentos de imposto de renda.<br />
+            <em>Os demais ativos</em> seguem a tabela regressiva.
+          </span>
+        </span>
+      </label>
+      <select id="tipoInvestimento">
+        <option value="cdp/lc">CDB/LC</option>
+        <option value="lci/lca">LCI/LCA</option>
+        <option value="tesouro">TESOURO DIRETO</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="tipoRentabilidade">
+        Tipo de Rentabilidade
+        <span class="tooltip">
+          <span class="tooltip-icon">?</span>
+          <span class="tooltip-text">
+            <strong>Tipo de Rentabilidade:</strong><br />
+            <em>Os pré-fixados</em> rendem uma taxa fixa.<br />
+            <em>Os pós-fixados</em> rendem uma porcentagem do CDI.<br />
+            <em>O IPCA</em> rende uma taxa fixa + IPCA.
+          </span>
+        </span>
+      </label>
+      <select id="tipoRentabilidade">
+        <option value="preFixado">Pré-Fixado</option>
+        <option value="posFixado">Pós-Fixado</option>
+        <option value="ipca">IPCA</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="valorInicial">Valor Inicial (R$)</label>
+      <input type="number" id="valorInicial" min="0" step="any" />
+    </div>
+
+    <div class="form-group">
+      <label for="valorMensal">Valor Mensal (R$)</label>
+      <input type="number" id="valorMensal" min="0" step="any" />
+    </div>
+
+    <div class="form-row">
+      <input type="number" id="taxa" min="0" step="any" placeholder="Taxa de Juros (%)" />
+      <select id="tipoTaxa">
+        <option value="mensal">Mensal</option>
+        <option value="anual">Anual</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <input type="number" id="tempo" min="0" step="1" placeholder="Tempo de Investimento" />
+      <select id="tipoTempo">
+        <option value="meses">Meses</option>
+        <option value="anos">Anos</option>
+      </select>
+    </div>
+
+    <input type="submit" value="Calcular" onclick="calcular()" />
+
+    <div id="resultado" class="footer"></div>
+  </div>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>

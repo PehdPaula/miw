@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil - MIW</title>
+  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="saudacao">
+      <h1>Meu Perfil</h1>
+      <button class="voltar-btn" onclick="window.location.href='principal.html'">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+  </header>
+
+  <section class="perfil-secao">
+    <h2>Privacidade</h2>
+    <div class="perfil-opcao">
+      <label for="novaSenha">Mudar Senha:</label>
+      <input type="password" id="novaSenha" placeholder="Digite nova senha">
+      <button onclick="alterarSenha()">Salvar</button>
+    </div>
+    <div class="perfil-opcao">
+      <label for="novoNome">Nome:</label>
+      <input type="text" id="novoNome" placeholder="Digite novo nome" value="">
+      <button onclick="alterarNome()">Salvar</button>
+    </div>
+    <div class="perfil-opcao">
+      <label for="novoEmail">E-mail:</label>
+      <input type="email" id="novoEmail" placeholder="Digite novo e-mail" value="pedro@example.com">
+      <button onclick="alterarEmail()">Salvar</button>
+    </div>
+  </section>
+
+  <section class="perfil-secao">
+    <h2>Perfil de Investidor</h2>
+    <p>Responda às perguntas abaixo para determinar seu perfil:</p>
+    <div class="perfil-opcao">
+      <label>1. Qual é sua tolerância a riscos?</label>
+      <select id="pergunta1">
+        <option value="1">Baixa (Conservador)</option>
+        <option value="2">Média (Moderado)</option>
+        <option value="3">Alta (Arrojado)</option>
+      </select>
+    </div>
+    <div class="perfil-opcao">
+      <label>2. Qual é o horizonte de investimento?</label>
+      <select id="pergunta2">
+        <option value="1">Curto prazo (< 1 ano)</option>
+        <option value="2">Médio prazo (1-5 anos)</option>
+        <option value="3">Longo prazo (> 5 anos)</option>
+      </select>
+    </div>
+    <div class="perfil-opcao">
+      <label>3. Qual é sua experiência com investimentos?</label>
+      <select id="pergunta3">
+        <option value="1">Nenhuma</option>
+        <option value="2">Pouca</option>
+        <option value="3">Muita</option>
+      </select>
+    </div>
+    <button onclick="calcularPerfil()">Ver Meu Perfil</button>
+    <div id="resultadoPerfil" class="perfil-resultado"></div>
+  </section>
+
+  <section class="perfil-secao">
+    <button class="desconectar-btn" onclick="window.location.href='login.html'">Desconectar-se</button>
+  </section>
+
+  <script src="perfil.js"></script>
+</body>
+</html>

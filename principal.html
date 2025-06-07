@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIW - Tela Inicial</title>
+  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="saudacao">
+      <h2>Bem vindo Pedro!</h2>
+      <button class="perfil-icon" onclick="window.location.href='perfil.html'">
+        <i class="fas fa-user"></i>
+      </button>
+    </div>
+  </header>
+
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+
+  <div class="carrossel-container">
+    <div class="carrossel slide1 slide">
+      "Diversifique sua carteira: não coloque todos os ovos na mesma cesta."
+    </div>
+    <div class="carrossel slide2 slide">
+      "Tesouro Direto é ótimo para iniciantes: segurança e rentabilidade garantida."
+    </div>
+    <div class="carrossel slide3 slide">
+      "Fundos imobiliários permitem investir em imóveis com pouco dinheiro."
+    </div>
+
+    <div class="controles">
+      <label class="controle" for="slide1"></label>
+      <label class="controle" for="slide2"></label>
+      <label class="controle" for="slide3"></label>
+    </div>
+  </div>
+
+  <div class="opcoes-investimento">
+    <a href="calculadora.html" class="opcao-btn">
+        <i class="fas fa-calculator"></i> Calculadora de Investimentos
+    </a>
+    <a href="criptomoedas.html" class="opcao-btn">
+      <i class="fab fa-bitcoin"></i> Criptomoedas
+    </a>
+    <a href="mercado-investimentos.html" class="opcao-btn">
+      <i class="fas fa-chart-line"></i> Mercado de Investimentos
+    </a>
+    <a href="miu-chatbot.html" class="opcao-btn">
+      <i class="fas fa-comments"></i> MIU (Chatbot)
+    </a>
+  </div>
+
+  <script src="principal.js"></script>
+</body>
+</html>

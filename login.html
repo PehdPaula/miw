@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MIW</title>
+  <link rel="icon" type="image/png" href="logo-miw.png">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <img src="logo-miw.png" alt="Logo" class="logo">
+    <div class="header">
+      <h2>Login</h2>
+    </div>
+    <form onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+      </div>
+
+      <input type="submit" value="Login">
+      <button class="avancar-btn" onclick="window.location.href='principal.html'">
+        <i class="fas fa-arrow-left"></i> Avançar
+      </button>
+    </form>
+
+    <div class="footer">
+      <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastrar</a></p>
+      <p>Esqueceu sua senha? <a href="senha.html">Recuperar senha</a></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
